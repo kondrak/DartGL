@@ -3,10 +3,10 @@ part of dart_gl;
 
 // textures to load
 const texturesToLoad = const {
-    "wall"     : "brick.png",
-    "font"     : "font.png",
-    "frame1"   : "frame1.png",
-    "atlasTex" : "atlas.png"
+    "wall"     : "gfx/brick.png",
+    "font"     : "gfx/font.png",
+    "frame1"   : "gfx/frame1.png",
+    "atlasTex" : "gfx/atlas.png"
 };
 
 
