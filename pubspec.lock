@@ -8,7 +8,7 @@ packages:
   math:
     description: math
     source: hosted
-    version: "0.9.0"    
+    version: "0.9.0"
   vector_math:
     description: vector_math
     source: hosted
