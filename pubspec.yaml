@@ -2,4 +2,5 @@ name: dartfun
 description: A sample web application
 dependencies:
   browser: any
+  math: any
   vector_math: any
