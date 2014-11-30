@@ -156,7 +156,7 @@ class RectClipObject extends BaseRenderable
 
         textureMatrix.setIdentity();   
         textureMatrix.scale(1.0 / texture.width, 1.0 / texture.height);
-        textureMatrix.translate(uo*1.0, vo*1.0);
+        textureMatrix.translate(uo*1.0, -vo*1.0);
         textureMatrix.scale(w*1.0, h*1.0);
 
         glContext.uniformMatrix4fv(u_textureMatrixLocation, false, textureMatrix.storage);
