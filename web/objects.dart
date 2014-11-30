@@ -112,9 +112,6 @@ class RectObject extends BaseRenderable
         GL.Scale(scale.x, scale.y, scale.z);
 
         textureMatrix.setIdentity();
-        // dlaczego wsio jest do gory nogami?    
-        textureMatrix.scale(1.0, -1.0);
-
         glContext.uniformMatrix4fv(u_textureMatrixLocation, false, textureMatrix.storage);
         glContext.uniform4fv(u_vertexColorLocation, color.storage);
 
@@ -141,7 +138,7 @@ class RectClipObject extends BaseRenderable
 
         shader.Load();
         texture.Bind();
-
+        
         glContext.bindBuffer(WebGL.RenderingContext.ARRAY_BUFFER, _vertexBuffer);
         glContext.vertexAttribPointer(a_positionLocation, 3, WebGL.RenderingContext.FLOAT, false, 0, 0);
 
@@ -157,9 +154,9 @@ class RectClipObject extends BaseRenderable
         GL.Scale(2 * w / canvas.height, 2 * h / canvas.height);
         GL.Scale(scale.x, scale.y, scale.z);
 
-        textureMatrix.setIdentity();
-        textureMatrix.scale(1.0 / texture.width, -1.0 / texture.height);
-        textureMatrix.translate(uo*1.0, -vo*1.0);
+        textureMatrix.setIdentity();   
+        textureMatrix.scale(1.0 / texture.width, 1.0 / texture.height);
+        textureMatrix.translate(uo*1.0, vo*1.0);
         textureMatrix.scale(w*1.0, h*1.0);
 
         glContext.uniformMatrix4fv(u_textureMatrixLocation, false, textureMatrix.storage);

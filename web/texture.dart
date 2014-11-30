@@ -62,7 +62,7 @@ class TextureManager
             textures[texName] = new Texture(glContext.createTexture(), image.width, image.height);
 
             texMgr.bindTexture(texName);
-            //glContext.pixelStorei(WebGL.RenderingContext.UNPACK_FLIP_Y_WEBGL, 1);
+            glContext.pixelStorei(WebGL.RenderingContext.UNPACK_FLIP_Y_WEBGL, 1);
             glContext.texImage2DImage(WebGL.RenderingContext.TEXTURE_2D, 0, WebGL.RenderingContext.RGBA, WebGL.RenderingContext.RGBA, WebGL.RenderingContext.UNSIGNED_BYTE, image);
             glContext.texParameteri(WebGL.RenderingContext.TEXTURE_2D, WebGL.RenderingContext.TEXTURE_MAG_FILTER, WebGL.RenderingContext.NEAREST);
             glContext.texParameteri(WebGL.RenderingContext.TEXTURE_2D, WebGL.RenderingContext.TEXTURE_MIN_FILTER, WebGL.RenderingContext.NEAREST);
